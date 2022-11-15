@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { GlobalContext } from '../context/GlobalState';
 
 export default function AddTransaction() {
 
@@ -8,7 +9,13 @@ export default function AddTransaction() {
   function onSubmit(e){
     e.preventDefault()
 
-    console.log("button clicked");
+    const newTransaction = {
+      id: Math.floor(Math.random()* 100000000),
+      text,
+      amount: +amount
+    }
+
+    addTransaction(newTransaction);
   }
 
   return (
