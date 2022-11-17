@@ -15,7 +15,7 @@ export default function AddTransaction() {
       amount: +amount
     }
 
-    addTransaction(newTransaction);
+    // addTransaction(newTransaction);
   }
 
   return (
