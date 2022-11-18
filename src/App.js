@@ -4,17 +4,20 @@ import AddTransaction from './components/AddTransaction';
 import TransactionList from './components/TransactionList';
 import Balance from './components/Balance';
 import IncomeExpenses from './components/IncomeExpenses';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
-    <div className="container">
-      <Header/>
-      <Balance/>
-      <IncomeExpenses/>
-      <TransactionList/>
-      <AddTransaction/>
-    </div>
-  );
+    <GlobalProvider>
+        <Header/>
+      <div className="container">
+        <Balance/>
+        <IncomeExpenses/>
+        <TransactionList/>
+        <AddTransaction/>
+      </div>
+    </GlobalProvider>
+    );
 }
 
 export default App;
