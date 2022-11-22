@@ -14,8 +14,8 @@ export default function Balance() {
 
   return (
     <div>
-      <p>My balance</p>
-      <h1>{moneyFormatter(total)}</h1>
+      <h2>My balance</h2>
+      <h2>{moneyFormatter(total)}</h2>
     </div>
   )
 }

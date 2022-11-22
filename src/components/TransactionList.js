@@ -8,10 +8,10 @@ export default function TransactionList() {
 
   return (
     <div>
-      <p>List of Expenses</p>
-      <li>
+      <h3>List of Expenses</h3>
+      <ul>
       {transactions.map(transaction=>(<Transaction key={transaction.id} transaction={transaction} />))}
-      </li>
+      </ul>
     </div>
   )
 }

@@ -20,11 +20,11 @@ const IncomeExpenses = () => {
   return (
     <div>
       <div>
-        <p>Income</p>
+        <h3>Income</h3>
         <p>{moneyFormatter(income)}</p>
       </div>
       <div>
-        <p>Expenses</p>
+        <h3>Expenses</h3>
         <p>{moneyFormatter(expenses)}</p>
       </div>
     </div>
