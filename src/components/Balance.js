@@ -13,9 +13,9 @@ export default function Balance() {
   console.log(total);
 
   return (
-    <div>
-      <h2>My balance</h2>
-      <h2>{moneyFormatter(total)}</h2>
+    <div className='container'>
+      <h4 className='balance'>My balance</h4>
+      <h1>{moneyFormatter(total)}</h1>
     </div>
   )
 }

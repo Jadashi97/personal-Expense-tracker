@@ -18,14 +18,14 @@ const IncomeExpenses = () => {
 
 
   return (
-    <div>
+    <div className='inc-expense-container'>
       <div>
         <h3>Income</h3>
-        <p>{moneyFormatter(income)}</p>
+        <p className='money plus'>{moneyFormatter(income)}</p>
       </div>
       <div>
         <h3>Expenses</h3>
-        <p>{moneyFormatter(expenses)}</p>
+        <p className='money minus'>{moneyFormatter(expenses)}</p>
       </div>
     </div>
   )

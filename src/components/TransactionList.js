@@ -9,7 +9,7 @@ export default function TransactionList() {
   return (
     <div>
       <h3>List of Expenses</h3>
-      <ul>
+      <ul className='list'>
       {transactions.map(transaction=>(<Transaction key={transaction.id} transaction={transaction} />))}
       </ul>
     </div>
