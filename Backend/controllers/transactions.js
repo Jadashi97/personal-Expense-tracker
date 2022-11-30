@@ -14,9 +14,9 @@ exports.addTransaction = (req,res, next) => {
     res.send("Post Transactions")
 };
 
-// @desc  transactions
-// @route Get /api/v1/transactions
+// @desc  delete transactions
+// @route Del /api/v1/transactions
 // @access Public
-exports.getTransactions = (req,res, next) => {
-    res.send("Get Transactions")
+exports.deleteTransaction = (req,res, next) => {
+    res.send("Delete Transactions")
 };
