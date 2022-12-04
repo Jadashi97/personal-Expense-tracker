@@ -61,7 +61,7 @@ exports.deleteTransaction = async(req,res, next) => {
         if(!transaction){
             return res.status(404).json({
                 success: false,
-                error: "where is the transation"
+                error: "where is the transaction"
             });
         }
 
@@ -77,5 +77,4 @@ exports.deleteTransaction = async(req,res, next) => {
             error: "server error"
         })
     }
-    res.send("Delete Transactions")
 };
