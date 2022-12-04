@@ -33,14 +33,14 @@ exports.addTransaction = async (req,res, next) => {
     try {
         const {text, amount} = req.body;
 
-        const trasaction = await Transaction.create(req.body);
+        const transaction = await Transaction.create(req.body);
         
         return res.status(201).json({
             success:true,
-            data: trasaction
+            data: transaction
         })
     } catch (error) {
-        if(err){
+        if(error){
             return res.status(400).json({
                 success:false,
                 error: "cmon error occured"
@@ -54,6 +54,28 @@ exports.addTransaction = async (req,res, next) => {
 // @desc  delete transactions
 // @route Del /api/v1/transactions
 // @access Public
-exports.deleteTransaction = (req,res, next) => {
+exports.deleteTransaction = async(req,res, next) => {
+    try {
+        const transaction = await Transaction.findById(req.params.id);
+
+        if(!transaction){
+            return res.status(404).json({
+                success: false,
+                error: "where is the transation"
+            });
+        }
+
+        await transaction.remove();
+
+        return res.status(200).json({
+            success: true,
+            data: {}
+        })
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            error: "server error"
+        })
+    }
     res.send("Delete Transactions")
 };

@@ -15,7 +15,7 @@ const transactions = require('./routes/transaction');
 
 const app = express();
 
-// app.use(express.json());
+app.use(express.json()); //this allows to use body parser to send data.
 
 
 
