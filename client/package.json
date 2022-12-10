@@ -35,5 +35,10 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://localhost:4000"
+  "proxy": "https://localhost:5000",
+  "description": "client end",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "jadashi97",
+  "license": "ISC"
 }
